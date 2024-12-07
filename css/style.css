@@ -201,51 +201,44 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-/* Style khusus untuk input telepon */
-#phone,
-#name {
+/* Style khusus untuk input */
+#name,
+#phone {
+  width: 100%;
   position: relative;
-  padding-left: 70px; /* Memberi ruang untuk bendera dan pembatas */
-  background-image: linear-gradient(
-    90deg,
-    #f0f0f0 45px,
-    #e0e0e0 45px,
-    #e0e0e0 46px,
-    transparent 46px
-  );
+  padding: 10px 15px 10px 80px;
 }
 
-#name::before {
-  content: "🇲🇩";
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  text-align: center;
+/* Khusus untuk input phone */
+#phone {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18"><text y="14">🇲🇾</text></svg>'),
+    linear-gradient(90deg, #f0f0f0 45px, #e0e0e0 45px, #e0e0e0 46px, white 46px);
+  background-repeat: no-repeat;
+  background-position: 10px center, 0 0;
+  background-size: 25px auto, 100% 100%;
 }
 
-/* Menambahkan pseudo-element untuk area bendera */
-#phone::before {
-  content: "🇲🇾";
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  text-align: center;
+#name {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18"><text y="14">🪪</text></svg>'),
+    linear-gradient(90deg, #f0f0f0 45px, #e0e0e0 45px, #e0e0e0 46px, white 46px);
+  background-repeat: no-repeat;
+  background-position: 10px center, 0 0;
+  background-size: 25px auto, 100% 100%;
 }
 
 .input-wrapper {
   position: relative;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .input-wrapper i {
   position: absolute;
-  left: 10px;
+  left: 55px;
   top: 50%;
   transform: translateY(-50%);
   color: #666;
+  z-index: 2;
 }
 
 .input-wrapper input {
