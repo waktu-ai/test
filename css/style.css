@@ -119,8 +119,12 @@ html {
   padding: 10px 15px;
   margin-bottom: 10px;
   border: 1px solid #010101 !important;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   border: none;
+}
+
+.fa-placeholder {
+  font-family: "FontAwesome", "Poppins", sans-serif;
 }
 
 .form-container button {
@@ -191,4 +195,59 @@ html {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
   }
+}
+
+.input-field::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Style khusus untuk input telepon */
+#phone,
+#name {
+  position: relative;
+  padding-left: 70px; /* Memberi ruang untuk bendera dan pembatas */
+  background-image: linear-gradient(
+    90deg,
+    #f0f0f0 45px,
+    #e0e0e0 45px,
+    #e0e0e0 46px,
+    transparent 46px
+  );
+}
+
+#name::before {
+  content: "🇲🇩";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  text-align: center;
+}
+
+/* Menambahkan pseudo-element untuk area bendera */
+#phone::before {
+  content: "🇲🇾";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  text-align: center;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.input-wrapper input {
+  padding-left: 35px; /* Memberikan ruang untuk ikon */
 }
